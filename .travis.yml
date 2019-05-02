@@ -1,0 +1,23 @@
+sudo: required
+  
+# Enable C++ support
+language: cpp
+
+# Compiler selection
+compiler:
+  - gcc
+
+# Build steps
+script:
+  - g++ presentation.cpp -o mybinary
+  - cd build
+  - ${DEPS_DIR}/cmake/bin/cmake .. && make
+  
+test:
+  stage: test
+  script:
+    - ls -al
+    - chmod +x runTests.sh
+    - ./runTests.sh
+  only:
+    - master
