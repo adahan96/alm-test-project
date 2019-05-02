@@ -11,3 +11,12 @@ compiler:
 script:
   - g++ presentation.cpp -o mybinary
   
+test:
+  stage: test
+  script:
+    - ls -al
+    - chmod +x runTests.sh
+    - ./runTests.sh
+  only:
+    - master
+
