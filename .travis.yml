@@ -10,14 +10,4 @@ compiler:
 # Build steps
 script:
   - g++ presentation.cpp -o mybinary
-  - cd build
-  - ${DEPS_DIR}/cmake/bin/cmake .. && make
   
-test:
-  stage: test
-  script:
-    - ls -al
-    - chmod +x runTests.sh
-    - ./runTests.sh
-  only:
-    - master
