@@ -7,8 +7,6 @@ int main(int argc, char** argv){
         median = atoi(argv[argc/2]);
     else
         median = (atoi(argv[(argc/2)]) +  atoi(argv[(argc/2) + 1])) / 2;
-    
 	cout << median;
-	
     return 0; 
 }
